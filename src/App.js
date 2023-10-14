@@ -4,9 +4,10 @@ import MovieCard from './MovieCard';
 
 import './App.css';
 // import { FaSearch } from "react-icons/fa"
-// import SearchIcon from './search.svg'
+import SearchIcon from './search.svg'
 
 const API_URL = 'http://www.omdbapi.com/?apikey=63737720'
+
 
 // const movie1 = {
 //     "Title": "Enter the Matrix",
@@ -41,11 +42,11 @@ return (
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
-            {/* <img
-                src={FaSearch}
+            {<img
+                src={SearchIcon}
                 alt='search'
                 onClick={() => searchMovies(searchTerm)}
-            /> */}
+            />}
         </div>
 
         {movies?.length > 0
