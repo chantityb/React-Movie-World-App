@@ -1,3 +1,5 @@
+import React  from 'react';
+
 import { useState, useEffect } from 'react';
 
 import MovieCard from './MovieCard';
@@ -6,16 +8,16 @@ import './App.css';
 // import { FaSearch } from "react-icons/fa"
 import SearchIcon from './search.svg'
 
-const API_URL = 'http://www.omdbapi.com/?apikey=63737720'
+const API_URL = process.env.REACT_APP_OMDB_API;
+console.log(process.env.REACT_APP_OMDB_API);
 
-
-// const movie1 = {
-//     "Title": "Enter the Matrix",
-//     "Year": "2003",
-//     "imdbID": "tt0277828",
-//     "Type": "game",
-//     "Poster": "https://m.media-amazon.com/images/M/MV5BNWM3MDU2MWQtYjdlNC00NDBlLTkyNGMtNjdhYjdlNTdiNTFlXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg"
-// }
+/*const movie1 = {
+    "Title": "Enter the Matrix",
+    "Year": "2003",
+    "imdbID": "tt0277828",
+    "Type": "game",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNWM3MDU2MWQtYjdlNC00NDBlLTkyNGMtNjdhYjdlNTdiNTFlXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg"
+}*/
 
 const App = () => {
     const [movies, setMovies] = useState([]);
